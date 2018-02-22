@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class WilliamDataModel {
 
 	int rows, colums, minIngredient, maxSliceSize;
+	int nbTomato = 0, nbMushroom = 0;
 	char[][] pizza;
 
 	public WilliamDataModel(int rows, int colums, int minIngredient, int maxSliceSize) {
@@ -19,6 +20,12 @@ public class WilliamDataModel {
 			String line = inputFile.nextLine();
 			for (int j = 0; j < line.length(); j++) {
 				pizza[i][j] = line.charAt(j);
+				if (pizza[i][j] == 'T' ){
+					nbTomato++;
+				}
+				else{
+					nbMushroom++;
+				}
 			}
 			i++;
 
